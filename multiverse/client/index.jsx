@@ -1,11 +1,19 @@
 // This is the client index.
-class App extends React.Component {
+import React from "react";
+import ReactDOM from "react-dom";
+import $ from "jquery";
+
+class Multiverse extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      greeting: "Welcome to Multiverse."
+    };
   }
   componentDidMount() {}
   render() {
-    return <h1>Multiverse</h1>;
+    return <h1>{this.state.greeting}</h1>;
   }
 }
+
+ReactDOM.render(<Multiverse />, document.getElementById("app"));
